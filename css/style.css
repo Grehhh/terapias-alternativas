@@ -7,13 +7,18 @@ font-family: 'Great Vibes', cursive;
 
 */
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #fff2e6;
 }
 
 p {
 	font-family: 'Nunito', sans-serif;			 
-
 }
 
 header, aside, .overall {
@@ -65,23 +70,7 @@ h2 {
 	flex: 0 0 20%;
 	max-width: 20%;
 }
-/*----------------------------OVERLAY------------------------*/
 
-.overall {
-	font-family: 'Great Vibes', cursive;
-	font-size: 3.5em;
-	padding-top: 46vh;
-	letter-spacing: 0.1em;
-	font-weight: bold;
-}
-
-.overlay {
-	background-color: white;
-	position: fixed;
-	height: 100vh;
-	width: 100%;
-	z-index: 5000;
-}
 
 /*-----------------------------NAV---------------------------*/
 
@@ -96,11 +85,9 @@ nav li {
 	text-decoration: none;
 }
 
-
-
 /*----------------------------HEADER-------------------------*/
 
-header {														/*meter z-index*/
+header {														
 	height: 100vh;
 	background: url(../img/arena.jpg) fixed center / cover;
 }
@@ -129,7 +116,6 @@ h1 {
 
 .intro p {
 	font-size: 1.2em;
-
 }
 
 /*-----------------------DIVIDER-----------------------*/
@@ -153,8 +139,6 @@ aside {
 	padding: 10px 10px;
 }
 
-aside div {
-}
 
 aside p {
 	font-family: 'B612', sans-serif;
@@ -209,40 +193,26 @@ h3 {
 /*-----------------------RESPONSIVE---------------------*/
 
 
-	.section-300 {
-	 	padding-left: 10px !important;
-	 	padding-right: 10px !important;
-		padding-top: 20px !important;
-		padding-bottom: 20px !important;
-		margin-top: 0;
+@media screen and (min-width: 360px) {
+	section {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
 	}
 
-	.img-300 {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0
+	p {
+		font-size: 1.3em !important;
 	}
 
-	.h2-300 {
-		margin: 20px 0;
-		font-family: 'B612', sans-serif;
-		font-size: 1.7em;
+	.padding-left {
+		padding-left: initial;
 	}
 
-	.aside-p-300 {
-		font-family: 'B612', sans-serif;
-		font-family: 'Great Vibes', cursive;
-		font-size: 2em;
-		padding: 30px;
-		color: #690e0e;
-		font-weight: bold;
-		margin-bottom: 0;
-		text-align: center !important;
+	.padding-right {
+		padding-right: initial;
 	}
-/* 
-@media screen and (max-width: 50em)  {
 
-
-
-
-} */
+	section img{
+		display: block;
+		margin: 0 auto;
+	}
+} 
